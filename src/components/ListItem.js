@@ -2,9 +2,10 @@ import React, { Component } from 'react';
 import { Text, TouchableWithoutFeedback, View } from 'react-native';
 import { Actions } from 'react-native-router-flux';
 import { CardSection } from './commons';
+import EmployeeEdit from '../components/EmployeeEdit'
  
 export default class ListItem extends Component {
-    onItemPress = () => Actions.employeeCreate({ employee: this.props.employee.item });
+    onItemPress = () => Actions.employeeEdit({ employee: this.props.employee.item });
     render() {
         const { name } = this.props.employee.item;
  
